@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)file:///Users/anandpatil/Downloads/tarami-v2_2.html -->
+<!-- saved from url=(0051)file:///Users/anandpatil/Downloads/tarami-v2_3.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarami — Checkout</title>
-  <link href="./Tarami — Checkout_files/css2" rel="stylesheet">
+  <link href="./index_files/css2" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --cream: #FAF7F2; --gold: #C8A96E; --gold-dark: #A07840; --ink: #1C1610; --muted: #7A6A55; --border: #E2D9CC; }
@@ -111,7 +111,7 @@
   <footer><span>✦</span> &nbsp; Secure Checkout &nbsp; <span>✦</span> &nbsp; mytarami.in</footer>
 </div>
 <script>
-  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbz12wyUZvZ7uXkJAqO-1HXtBMikdt60YqdVrVozGZHFPKlWqNBZseL78yA2arA545Qr/exec';
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbzhmIBsJU77gc_taKvHlxy8piBYwnOepfNVgKKVnnh7okD2xq0o_OpjOGjIXeXFE-p7/exec';
   var UPI_ID = '9011779517@ybl';
   var customer = { name:'', phone:'', amount:'', app:'' };
 
@@ -155,7 +155,7 @@
     };
     window.location.href = schemes[appName] || base;
     if (SHEET_URL !== 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') {
-      fetch(SHEET_URL, { method:'POST', body: JSON.stringify(customer) }).catch(function(){});
+      fetch(SHEET_URL, { method:'POST', mode:'no-cors', body: JSON.stringify(customer), headers:{'Content-Type':'text/plain'} }).catch(function(){});
     }
     setTimeout(function(){ showSuccess(); }, 2000);
   }
