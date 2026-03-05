@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background: black; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; margin: 0; }
+        .eye { width: 100px; height: 150px; background: #00ffcc; border-radius: 50%; margin: 0 40px; animation: blink 4s infinite; box-shadow: 0 0 20px #00ffcc; }
+        @keyframes blink { 
+            0%, 90%, 100% { transform: scaleY(1); } 
+            95% { transform: scaleY(0.1); } 
+        }
+    </style>
+</head>
+<body>
+    <div class="eye"></div>
+    <div class="eye"></div>
+</body>
+</html>
